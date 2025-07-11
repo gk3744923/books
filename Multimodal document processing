@@ -1,0 +1,133 @@
+Certainly! Here's a detailed and engaging hackathon problem statement for a challenge based on Multimodal RAG (Retrieval-Augmented Generation) in the context of document understanding in banking or enterprise content management.
+
+
+---
+
+🏆 Hackathon Problem Statement
+
+“Multimodal Intelligence Agent for Document Understanding in Banking”
+
+📘 Overview:
+
+Banks and financial institutions process millions of documents — from scanned loan agreements and invoices to regulatory circulars and audit reports. These documents are often multi-modal in nature: containing text, tables, images, stamps, signatures, and charts.
+
+Traditionally, querying and understanding such information requires human effort and domain knowledge. Your challenge is to build an AI-powered Multimodal Retrieval-Augmented Generation (RAG) system that can autonomously understand, retrieve, and answer queries over this rich document set.
+
+
+---
+
+🧠 Objective:
+
+Design an AI agent that can:
+
+1. Ingest and process multimodal documents (PDFs with text, images, tables)
+
+
+2. Extract and store information in a retrievable format using embeddings
+
+
+3. Accept user queries in natural language
+
+
+4. Retrieve relevant content across modalities (text, tables, visuals)
+
+
+5. Use a multimodal LLM to generate a grounded and accurate response, citing sources (e.g., page or section)
+
+
+
+
+---
+
+📂 Example Queries the Agent Should Handle:
+
+“What is the interest rate mentioned in the scanned loan agreement?”
+
+“Find all pages with XYZ Bank’s stamp.”
+
+“What is the net profit reported in the chart in the annual report?”
+
+“Who signed the agreement dated March 2023?”
+
+“List all policy circulars with compliance clause references.”
+
+
+
+---
+
+🧰 Tools Allowed (Recommended, not mandatory):
+
+Multimodal LLMs (GPT-4o, Gemini Pro Vision, Claude 3, LLaVA)
+
+OCR libraries (Tesseract, Azure Form Recognizer, Amazon Textract)
+
+Vision encoders (CLIP, BLIP-2)
+
+Vector DBs (FAISS, ChromaDB, Pinecone)
+
+Orchestration frameworks (LangChain, LangGraph, LlamaIndex)
+
+Document parsing (PyMuPDF, pdfplumber, DocTR)
+
+
+
+---
+
+📦 Sample Document Types (organizers can provide or simulate):
+
+Scanned loan agreements
+
+Hand-signed contracts
+
+Bank circulars with stamps
+
+Financial statements with tables and charts
+
+KYC forms with images/signatures
+
+
+
+---
+
+✅ Deliverables:
+
+A working prototype that can accept documents and user queries
+
+Retrieval logic supporting both text and images
+
+Answer generation with citation of document region/page
+
+(Optional) UI to show document preview + answer traceability
+
+
+
+---
+
+🏁 Evaluation Criteria:
+
+Criteria	Weight
+
+Accuracy of answers across modalities	30%
+Quality of retrieval (text + image grounding)	25%
+Innovation in architecture or approach	20%
+User experience (CLI/UI/API)	15%
+Explainability / Traceability	10%
+
+
+
+---
+
+🧠 Bonus Challenges:
+
+Extract charts and answer visual data questions
+
+Use agentic behavior (e.g., reasoning over multiple documents or pages)
+
+Support queries over a batch of documents (“Which customers have signed forms with missing PAN?”)
+
+
+
+---
+
+Let me know if you'd like a starter dataset, UI template, or code scaffold for this challenge!
+
