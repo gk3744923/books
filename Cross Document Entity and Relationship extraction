@@ -1,0 +1,139 @@
+Sure! Here's a clear and compelling hackathon problem statement that you can use to challenge participants to build an AI system that extracts entities and relationships from documents in a banking/content management context, using Agentic AI principles:
+
+
+---
+
+🏆 Hackathon Problem Statement:
+
+“Agentic AI for Cross-Document Entity & Relationship Extraction in Banking”
+
+🧩 Problem Overview:
+
+Banks and financial institutions manage thousands of documents — including KYC forms, loan agreements, internal memos, emails, audit reports, and regulatory circulars. These documents often contain critical entities (e.g., customers, loans, transactions) and hidden relationships (e.g., "customer A defaulted", "vendor B is linked to a fraud case").
+
+Manual extraction of such information is time-consuming, error-prone, and lacks scalability.
+
+Your challenge is to build an Agentic AI system that can:
+
+Ingest multiple unstructured documents
+
+Extract relevant entities and relationships
+
+Link facts across documents
+
+Answer complex queries by reasoning over the extracted information
+
+
+
+---
+
+🎯 Objectives:
+
+Participants must build an autonomous agent that can:
+
+1. Parse multiple document types (PDFs, text, etc.)
+
+
+2. Identify and extract key entities (e.g., people, companies, dates, amounts)
+
+
+3. Identify relationships between these entities (e.g., applied for loan, signed contract with, linked to fraud)
+
+
+4. Store and link extracted facts across documents
+
+
+5. Enable natural language querying over the extracted data:
+
+> "Which customers who signed loans in 2023 were later involved in any compliance issues?"
+
+
+
+
+6. (Optional advanced goal): Build a knowledge graph or visualize the entity network.
+
+
+
+
+---
+
+🧠 Key Concepts to Apply:
+
+Agentic AI (multi-step, goal-directed reasoning)
+
+Named Entity Recognition (NER)
+
+Relation Extraction
+
+Cross-document coreference resolution
+
+Retrieval-augmented generation (RAG) or knowledge graphs
+
+LLM-based multi-hop QA
+
+
+
+---
+
+🔧 Tools Allowed (not mandatory):
+
+OpenAI / Gemini / Claude (LLMs)
+
+LangChain + LangGraph
+
+SpaCy / Hugging Face Transformers
+
+Neo4j / NetworkX / ChromaDB
+
+PDF parsers (PyMuPDF, pdfplumber, etc.)
+
+
+
+---
+
+📂 Sample Document Types (You can provide these):
+
+KYC documents
+
+Loan agreements
+
+Internal audit reports
+
+Customer complaint records
+
+Regulatory circulars
+
+
+
+---
+
+✅ Expected Deliverables:
+
+Working agentic AI pipeline/codebase
+
+Web UI or CLI interface to query or explore entities/relations
+
+Sample queries answered with document references
+
+Readme/demo explaining your approach
+
+
+
+---
+
+🏁 Evaluation Criteria:
+
+Criteria	Weight
+
+Accuracy of entity & relation extraction	25%
+Ability to reason across documents	25%
+Autonomy & robustness of the agent	20%
+Query handling / user interaction	15%
+Innovation and architecture	15%
+
+
+
+---
+
+Would you like a sample dataset or mock document pack to go along with this? I can help generate that too.
+
