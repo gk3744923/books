@@ -1,0 +1,33 @@
+Here’s an expanded, narrative-focused overview of the problem statement behind this Agentic AI system:
+
+
+---
+
+When customers reach out to their bank via email, chat, or phone, their issues are far from simple. Each query carries layers of context: transaction histories, past chats, account agreements, compliance regulations, and sometimes sensitive information. These interactions are often stored across fragmented systems—emails in one place, chat transcripts in another, documentation scattered elsewhere—making it nearly impossible for a support agent to access a unified view. The result is a disjointed experience: customers recount the same information, receive inconsistent answers, and feel their time isn’t being respected.
+
+At the same time, banks are turning to AI to scale support and reduce operational costs. But when these systems rely solely on automation, they stumble at nuances—like a multi-step dispute involving a suspicious transaction, or a question blending product eligibility with recent regulatory changes. These oversights trigger frustrating loops, where customers bounce between the AI and human agents without real progress, damaging trust and potentially causing financial harm  .
+
+Moreover, regulators demand that all financial communications be accurate, fully traceable, and compliant. Even small errors—incorrect fee explanations or misquoted policies—have real-world consequences. Banks cannot roll out fully automated chatbots without robust oversight. They need systems that offer speed without sacrificing accountability.
+
+Human oversight is not just a safety net—it’s central to trust. Research and industry pilots show that customers are more comfortable when AI suggestions get human review. Human approval lends not only accuracy, but also empathy and clarity—especially important when discussing fraud, credit, or privacy  .
+
+What this points to is a clear, critical challenge: there is no simple way to draw upon the full context of a customer's history, generate a personalized and accurate draft response quickly, and ensure every reply is validated before it reaches the customer. Solving this would:
+
+Eliminate repetitive questioning and inconsistent responses.
+
+Give agents full visibility into prior interactions.
+
+Combine AI-driven speed with human judgment and trust.
+
+Create a complete audit trail to meet compliance standards.
+
+
+This isn’t about replacing agents—it’s about equipping them with AI-accelerated context and drafting capabilities, then letting them apply real-world understanding and compliance checks before the message goes out. It’s the recognition that in banking, trust is built not by algorithms, but by the humans those algorithms support  .
+
+
+---
+
+Let me know if you’d like me to weave in scenario examples or focus on specific customer types (e.g., high-net-worth, SME).
+
+
+
