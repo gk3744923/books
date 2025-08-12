@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="multiAgentArch" name="Multi-Agent Mainframe Migration">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Swimlanes for layers -->
+        <mxCell id="layer1" value="Parsing Layer" style="swimlane;fillColor=#dae8fc;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="360" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer2" value="Analysis Layer" style="swimlane;fillColor=#e1d5e7;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="60" width="360" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer3" value="Transformation Layer" style="swimlane;fillColor=#d5e8d4;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="60" width="360" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Input Artefacts -->
+        <mxCell id="input" value="Mainframe Artefacts&#xa;(COBOL, JCL, Copybooks, VSAM, DB2 DDL)" style="shape=parallelogram;fillColor=#fff2cc;strokeColor=#d6b656;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="260" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Parsing Agents -->
+        <mxCell id="cobolParser" value="COBOL Parser&#xa;(ANTLR Grammar)" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="10" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="jclParser" value="JCL Parser" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="190" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="copybookParser" value="Copybook Parser" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="10" y="100" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="vsamParser" value="VSAM Schema Parser" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="190" y="100" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Analysis Agents -->
+        <mxCell id="dependencyMapper" value="Dependency Mapper" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="layer2">
+          <mxGeometry x="10" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="businessRules" value="Business Rules Extractor" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="layer2">
+          <mxGeometry x="190" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dataMapping" value="Data Model Mapping" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="layer2">
+          <mxGeometry x="10" y="100" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="reportGen" value="Migration Report Generator" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="layer2">
+          <mxGeometry x="190" y="100" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Transformation Agents -->
+        <mxCell id="irGen" value="Intermediate Representation (IR) Generator" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="layer3">
+          <mxGeometry x="10" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="javaGen" value="Java Code Generator" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="layer3">
+          <mxGeometry x="190" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="testHarness" value="Test Harness Generator" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="layer3">
+          <mxGeometry x="10" y="100" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="deployPackage" value="Deployment Package Builder" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="layer3">
+          <mxGeometry x="190" y="100" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- AI Orchestrator -->
+        <mxCell id="orchestrator" value="AI Orchestrator&#xa;(Google ADK / LangGraph)" style="rounded=1;fillColor=#ffcccc;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="360" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Output -->
+        <mxCell id="output" value="Modern Java Application&#xa;+ Migration Report" style="shape=parallelogram;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="880" y="10" width="260" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="edge1" style="endArrow=block;" edge="1" parent="1" source="input" target="layer1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge2" style="endArrow=block;" edge="1" parent="1" source="layer1" target="layer2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge3" style="endArrow=block;" edge="1" parent="1" source="layer2" target="layer3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge4" style="endArrow=block;" edge="1" parent="1" source="layer3" target="output">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge5" style="endArrow=block;dashed=1;" edge="1" parent="1" source="orchestrator" target="layer1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge6" style="endArrow=block;dashed=1;" edge="1" parent="1" source="orchestrator" target="layer2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge7" style="endArrow=block;dashed=1;" edge="1" parent="1" source="orchestrator" target="layer3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
