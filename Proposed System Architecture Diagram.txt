@@ -1,0 +1,85 @@
+Proposed System Architecture Diagram
+This diagram illustrates the core components and their interactions in a clear, sequential flow. The entire process functions as a feedback loop, with the Testing & Validation Agent continuously refining the output.
+
+Detailed Workflow: A Phased Approach to Conversion
+The conversion process is a structured journey, with each phase managed by a specialized AI agent.
+
+Phase 1: Ingestion & Deep Analysis
+Overview:
+The process begins with the Orchestration Agent receiving the mainframe source code and project artifacts. It dispatches the task to the Code Analysis Agent.
+Input:
+- Mainframe artifacts (COBOL code, JCL scripts, DB2/VSAM schemas)
+Code Analysis Agent Tasks:
+- Performs static and dynamic analysis
+- Parses legacy code into an Abstract Syntax Tree (AST)
+- Generates a detailed dependency map
+Artifacts Posted to Blackboard:
+- AST
+- dependency_map
+- data_dictionary
+
+Phase 2: Business Logic Extraction
+Overview:
+The Business Logic Extraction Agent retrieves the analyzed artifacts from the Blackboard.
+Input:
+- AST and dependency_map from the Blackboard
+Business Logic Agent Tasks:
+- Uses LLMs to infer and document core business rules in plain English
+- Separates application functionality from implementation details
+Artifacts Posted to Blackboard:
+- business_logic_summary
+
+Phase 3: Java Code Generation
+Overview:
+With business logic defined, the Java Code Generation Agent performs the core translation.
+Input:
+- business_logic_summary
+- data_dictionary
+Code Generation Agent Tasks:
+- Translates business rules into idiomatic Java code
+- Often uses Spring Boot framework
+Artifacts Posted to Blackboard:
+- generated_java_code
+
+Phase 4: Transformation of Dependencies & APIs
+Overview:
+Two agents work in parallel to modernize the application's environment.
+Input:
+- dependency_map
+- data_dictionary
+Dependency Resolver Agent Tasks:
+- Converts JCL and IMS DB schemas to modern equivalents (e.g., Kubernetes jobs, relational/NoSQL schemas)
+Integration & API Generation Agent Tasks:
+- Creates RESTful APIs to replace mainframe-specific protocols (e.g., CICS)
+Artifacts Posted to Blackboard:
+- modern_schemas
+- migration_scripts
+- api_definitions
+
+Phase 5: Automated Testing & Validation
+Overview:
+This stage ensures fidelity and correctness of the conversion.
+Input:
+- generated_java_code
+- Original mainframe test outputs
+Testing & Validation Agent Tasks:
+- Generates and executes automated tests
+- Compares results with original outputs
+- Flags discrepancies
+Artifacts Posted to Blackboard:
+- validation_report
+
+Phase 6: Human-in-the-Loop Oversight
+Overview:
+A human expert monitors the entire process via a dashboard.
+Input:
+- All artifacts on the Blackboard, especially the validation_report
+Human Expert Tasks:
+- Reviews and approves agent outputs
+- Provides corrections and guidance
+- Ensures business continuity
+Action:
+- Expert feedback is used to restart the workflow at the appropriate phase
+- Enables iterative refinement until full validation is achieved
+
+Let me know if you'd like this styled with specific fonts, colors, or if you want a matching diagram to go with it!
